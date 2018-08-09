@@ -5,5 +5,5 @@ nodenv_install_path: ~/.nodenv
 nodenv_git_url: https://github.com/nodenv/nodenv
 nodenv_git_update: true
 
-nodenv_build_git_url: https://github.com/nodenv/node-build.git
-nodenv_build_git_update: true
+node_build_git_url: https://github.com/nodenv/node-build.git
+node_build_git_update: true
