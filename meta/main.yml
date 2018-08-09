@@ -9,4 +9,9 @@ galaxy_info:
         - all
   galaxy_tags:
     - nodenv
+    - node
+    - javascript
+    - development
+    - system
+    - packaging
 dependencies: []
