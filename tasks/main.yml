@@ -1,0 +1,12 @@
+---
+# tasks file for ansible-role-nodenv
+- name: Install nodenv
+  git:
+    repo: "{{ nodenv_git_url }}"
+    dest: "{{ nodenv_install_path }}"
+    update: "{{ nodenv_update }}"
+- name: Install node-build plugin
+  git:
+    repo: "{{ node_build_git_url }}"
+    dest: "{{ nodenv_install_path}}/plugins/node-build"
+    update: "{{ node_build_git_update }}"

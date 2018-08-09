@@ -1,0 +1,12 @@
+galaxy_info:
+  author: Bryant Luk
+  description: Installs nodenv
+  license: Apache
+  min_ansible_version: 2.6
+  platforms:
+    - name: MacOSX
+      versions:
+        - all
+  galaxy_tags:
+    - nodenv
+dependencies: []
