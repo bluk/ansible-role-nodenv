@@ -29,9 +29,9 @@ Role Variables
 
 * `nodenv_git_update` - If the cloned `nodenv` git repository should be updated.
 
-* `nodenv_build_git_url` - The path to the `node-build` plugin for `nodenv`.
+* `node_build_git_url` - The path to the `node-build` plugin for `nodenv`.
 
-* `nodenv_build_git_udpate` - If the cloned `node-build` git repository should be updated.
+* `node_build_git_update` - If the cloned `node-build` git repository should be updated.
 
 Dependencies
 ------------
