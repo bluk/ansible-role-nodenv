@@ -10,9 +10,6 @@ matrix:
       osx_image: xcode9.3
 
 install:
-  # Install Ansible.
-  - brew install ansible
-
   # Add ansible.cfg to pick up roles path.
   - "{ echo '[defaults]'; echo 'roles_path = ../:../roles:./roles'; } >> ansible.cfg"
 
@@ -22,6 +19,20 @@ install:
   - "echo -e '[local]\nlocalhost ansible_connection=local' | sudo tee -a /etc/ansible/hosts > /dev/null"
 
 script:
+  # Get macOS version string.
+  - macos_version=$(sw_vers -productVersion)
+
+  # Install pip (macOS version dependent).
+  - |
+    if [[ "$macos_version" == 10.13.* ]]; then
+      sudo easy_install pip
+    else
+      # See: https://stackoverflow.com/a/49748494/100134
+      curl https://bootstrap.pypa.io/get-pip.py | sudo python
+    fi
+  # Install Ansible.
+  - sudo -H pip install ansible
+
   # Check the role/playbook's syntax.
   - "ansible-playbook tests/test.yml --syntax-check"
 
