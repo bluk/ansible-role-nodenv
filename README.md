@@ -1,6 +1,8 @@
 ansible-role-nodenv
 =========
 
+[![GitHub license](https://img.shields.io/github/license/bluk/ansible-role-nodenv.svg)](https://github.com/bluk/ansible-role-nodenv/blob/master/LICENSE) [![Build Status](https://travis-ci.com/bluk/ansible-role-nodenv.svg?branch=master)](https://travis-ci.com/bluk/ansible-role-nodenv)
+
 An [Ansible](https://www.ansible.com) role to install [nodenv](https://github.com/nodenv/nodenv).
 
 Requirements
